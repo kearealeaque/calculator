@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+  <title>Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="calculator">
+    <form class="main_form">
+      <div class="screen" id="screen">
+        <input
+          class="input"
+          id="input"
+          type="text"
+          onkeypress='return event.charCode >= 40 && event.charCode <= 57'
+          onblur="this.focus()"
+          autofocus />
+      </div>
+      <div class="buttons_row">
+        <button type="button" class="ops_button" id="open_bracket">(</button>
+        <button type="button" class="ops_button" id="close_bracket">)</button>
+        <button type="button" class="ops_button" id="percent">%</button>
+        <button type="button" value="*" class="ops_button" id="multiply">x</button>
+      </div>
+      <div class="buttons_row">
+        <button type="button" class="num_button" id="7">7</button>
+        <button type="button" class="num_button" id="8">8</button>
+        <button type="button" class="num_button" id="9">9</button>
+        <button type="button" class="ops_button" id="division">/</button>
+      </div>
+      <div class="buttons_row">
+        <button type="button" class="num_button" id="4">4</button>
+        <button type="button" class="num_button" id="5">5</button>
+        <button type="button" class="num_button" id="6">6</button>
+        <button type="button" class="ops_button" id="plus">+</button>
+      </div>
+      <div class="buttons_row">
+        <button type="button" class="num_button" id="1">1</button>
+        <button type="button" class="num_button" id="2">2</button>
+        <button type="button" class="num_button" id="3">3</button>
+        <button type="button" class="ops_button" id="minus">-</button>
+      </div>
+      <div class="buttons_row">
+        <button type="button" class="num_button" id="0">0</button>
+        <button type="button" class="num_button" id="dot">,</button>
+        <button type="button" class="ops_button" id="erase">CE</button>
+        <button type="button" class="equals_button" id="equals">=</button>
+      </div>
+    </form>
+  </div>
+
+</body>
+</html>
