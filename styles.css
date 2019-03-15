@@ -12,11 +12,13 @@
 }
 
 .display {
-  align: center;
-  width: 306px;
+  width: 307px;
   height: 45px;
   border: 1px solid grey;
   border-radius: 5px;
+  text-align: right;
+  font: 700 16px/1 Arial, sans-serif;
+
 }
 
 .input {
@@ -36,15 +38,6 @@
   justify-content: space-between;
 }
 
-.ops {
-  width: 70px;
-  height: 50px;
-  cursor: pointer;
-  font: 700 16px/1 Arial, sans-serif;
-  background-color: lightgrey;
-  border-radius: 5px;
-}
-
 .erase {
   width: 70px;
   height: 50px;
@@ -54,7 +47,7 @@
   border-radius: 5px;
 }
 
-.num {
+.buttons {
   width: 70px;
   height: 50px;
   cursor: pointer;
