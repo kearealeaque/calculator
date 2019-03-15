@@ -11,50 +11,63 @@
   padding: 20px;
 }
 
-.screen {
+.display {
   align: center;
+  width: 306px;
+  height: 45px;
+  border: 1px solid grey;
+  border-radius: 5px;
 }
 
 .input {
-align: center;
-    margin-bottom: 20px;
-    width: 306px;
-    height: 35px;
+  align: center;
+  margin-bottom: 20px;
+  width: 306px;
+  height: 35px;
   border: 1px solid #ccc;
   display: block;
-text-align: right;
-font: 700 16px/1 Arial, sans-serif;
+  text-align: right;
+  font: 700 16px/1 Arial, sans-serif;
 }
 
 .buttons_row {
-    margin: 10px 0;
-    display: flex;
-    justify-content: space-between;
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
 }
 
-.ops_button {
+.ops {
   width: 70px;
-      height: 50px;
-      cursor: pointer;
-      font: 700 16px/1 Arial, sans-serif;
-      background-color: lightgrey;
-      border-radius: 5px;
+  height: 50px;
+  cursor: pointer;
+  font: 700 16px/1 Arial, sans-serif;
+  background-color: lightgrey;
+  border-radius: 5px;
 }
 
-.num_button {
+.erase {
   width: 70px;
-      height: 50px;
-      cursor: pointer;
-      font: 700 16px/1 Arial, sans-serif;
-      background-color: #f9f9f9;
-      border-radius: 5px;
+  height: 50px;
+  cursor: pointer;
+  font: 700 16px/1 Arial, sans-serif;
+  background-color: lightgrey;
+  border-radius: 5px;
 }
 
-.equals_button {
+.num {
   width: 70px;
-      height: 50px;
-      cursor: pointer;
-      font: 700 16px/1 Arial, sans-serif;
-      background-color: orange;
-      border-radius: 5px;
+  height: 50px;
+  cursor: pointer;
+  font: 700 16px/1 Arial, sans-serif;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+}
+
+.equals {
+  width: 70px;
+  height: 50px;
+  cursor: pointer;
+  font: 700 16px/1 Arial, sans-serif;
+  background-color: orange;
+  border-radius: 5px;
 }
