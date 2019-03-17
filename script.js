@@ -157,4 +157,5 @@ function validateButton() {
 //event keyboard klick
 window.addEventListener('keydown', function(event) {
     document.getElementById(keyCode).click();
-}
+  }
+)
