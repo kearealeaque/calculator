@@ -156,6 +156,13 @@ function validateButton() {
 }
 //event keyboard klick
 window.addEventListener('keydown', function(event) {
-    document.getElementById(keyCode).click();
-  }
-)
+  if (event.getModifierState('Shift') == false) {
+    document.getElementById(event.keyCode).click();
+  } else if (event.keyCode == 56) {
+    document.getElementById(106).click();
+  } else if (event.keyCode == 57) {
+    document.getElementById(219).click();
+  } else if (event.KeyCode == 48) {
+    document.getElementById(221).click();
+  } 
+})
