@@ -6,7 +6,11 @@ class="input"
           onblur="this.focus()"
           autofocus />
 
-          
+
+          equation = equation.replace(/x/g, '*').replace(/÷/g, '/');
+
+
+
 "use strict";
 
 var screen = document.getElementById('screen');
@@ -36,6 +40,5 @@ window.addEventListener('keyup', function(event) {
     document.getElementById('equals').click();
   }
 });
-
 
 var result = parseFloat(document.getElementById('input').value);
