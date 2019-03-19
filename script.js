@@ -2,7 +2,7 @@ document.getElementById('screen').innerHTML = '';
 
 var screenContent = document.getElementById('screen');
 var buttons = document.getElementsByTagName('button');
-const operators = ['+', '-', 'x', '÷', '%', '.', '*', '/'];
+const operators = ['+', '-', 'x', '÷', '.', '*', '/'];
 const numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 const controls = ['CE', '='];
 
@@ -50,6 +50,8 @@ for (var i = 0; i < buttons.length; i++) {
       button.type = 'control';
     } else if (buttonContent == '(' || buttonContent == ')') {
       button.type = 'bracket';
+    } else if (buttonContent == '%') {
+      button.type = 'percent';
     } else {
       button.type = 'number';
     }
@@ -65,7 +67,8 @@ for (var i = 0; i < buttons.length; i++) {
     }
   }
 }
-//end of event
+
+//validation
 function validateButton() {
   var lastChar = screenContent.innerHTML.slice(-1);
   var lastNumber;
@@ -75,14 +78,15 @@ function validateButton() {
   var emptyScreen;
   var screenOnlyMinus;
   var screenOpenBracket;
-  var percentCheck;
-//get last char -- getProperties?
+//get last char
   if (numbers.includes(lastChar)) {
     lastNumber = true;
   } else if (operators.includes(lastChar)) {
     lastOperator = true;
   } else if (lastChar == '(' || lastChar == ')') {
     lastBracket = true;
+  } else if (lastChar == '%') {
+    lastPercent = true;
   }
 //get screen state
   if (screenContent.innerHTML == '') {
@@ -129,8 +133,8 @@ function validateButton() {
     break;
 
     case '%':
-    if (percentCheck) {
-      showOnScreen();
+    if (lastNumber) {
+      button.show();
     } else if (lastOperator) {
       button.replace();
     }
@@ -156,13 +160,14 @@ function validateButton() {
 }
 //event keyboard klick
 window.addEventListener('keydown', function(event) {
-  if (event.getModifierState('Shift') == false) {
-    document.getElementById(event.keyCode).click();
-  } else if (event.keyCode == 56) {
-    document.getElementById(106).click();
-  } else if (event.keyCode == 57) {
-    document.getElementById(219).click();
-  } else if (event.KeyCode == 48) {
-    document.getElementById(221).click();
-  } 
+  var shift = event.getModifierState('Shift');
+  var key = event.key;
+
+  if (key == 'Backspace' && !shift) {
+    screenContent.innerHTML = screenContent.innerHTML.substr(0, screenContent.innerHTML.length - 1);
+  } else if (key == 'Backspace' && shift) {
+    screenContent.innerHTML = '';
+  } else if (operators.includes(key) || numbers.includes(key) || key == '(' || key == ')' || key == '.' || key == 'Enter' || key == '%') {
+    document.getElementById(event.key).click();
+  }
 })
