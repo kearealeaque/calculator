@@ -117,7 +117,7 @@ function validateButton() {
     break;
 
     case '*':
-    if (lastNumber || lastPercent) {
+    if (lastNumber || lastPercent || lastBracket) {
       button.show();
     } else if (lastOperator) {
       button.replace();
@@ -125,7 +125,7 @@ function validateButton() {
     break;
 
     case '/':
-    if (lastNumber || lastPercent) {
+    if (lastNumber || lastPercent || lastBracket) {
       button.show();
     } else if (lastOperator) {
       button.replace();
