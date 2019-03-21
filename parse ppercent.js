@@ -28,6 +28,10 @@ function parsePercent() {
     findNum1();
   }
 
+
+
+
+
   function findNum1() {
     for (i = num1end - 1; i >= 0; i--) {
       if (!numbers.includes(expression[i])) {
@@ -41,7 +45,7 @@ function parsePercent() {
   }
 
   function replacePercent() {
-    newExpression = num1 + operator + '(' + num1 + '*' + num2 + '/100)';
+    newExpression = operator + '(' + num1 + '*' + num2 + '/100)';
     var s = screenContent.innerHTML;
     s = s.substr(0, operatorPosition) + newExpression + s.substr(percentPosition+1);
     screenContent.innerHTML = eval(s);
