@@ -9,20 +9,18 @@
    -webkit-user-select: none;
    -khtml-user-select: none;
    -moz-user-select: none;
-   -ms-user-select: none; 
+   -ms-user-select: none;
 }
 
 .screen {
-  align: center;
-  margin: 20px;
-  width: 300px;
+  margin: 24px;
+  width: 298px;
   height: 50px;
   border: 1px solid grey;
   border-radius: 5px;
   text-align: right;
   font: 700 16px/1 Roboto;
   overflow: auto;
-
 }
 
 .buttons {
