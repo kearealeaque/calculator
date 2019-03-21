@@ -5,63 +5,54 @@
   margin: 100px auto 0;
   text-align: center;
   border-radius: 4px;
-}
-
-.main_form {
-  padding: 20px;
+  user-select: none;
+   -webkit-user-select: none;
+   -khtml-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none; 
 }
 
 .screen {
-  width: 307px;
-  height: 45px;
+  align: center;
+  margin: 20px;
+  width: 300px;
+  height: 50px;
   border: 1px solid grey;
   border-radius: 5px;
   text-align: right;
-  font: 700 16px/1 Arial, sans-serif;
+  font: 700 16px/1 Roboto;
   overflow: auto;
 
 }
 
-.input {
-  align: center;
-  margin-bottom: 20px;
-  width: 306px;
-  height: 35px;
-  border: 1px solid #ccc;
-  display: block;
-  text-align: right;
-  font: 700 16px/1 Arial, sans-serif;
-}
-
-.buttons_row {
-  margin: 10px 0;
-  display: flex;
-  justify-content: space-between;
-}
-
-.erase {
-  width: 70px;
-  height: 50px;
-  cursor: pointer;
-  font: 700 16px/1 Arial, sans-serif;
-  background-color: lightgrey;
-  border-radius: 5px;
-}
-
 .buttons {
-  width: 70px;
-  height: 50px;
-  cursor: pointer;
-  font: 700 16px/1 Arial, sans-serif;
-  background-color: #f9f9f9;
-  border-radius: 5px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
 }
 
-.equals {
-  width: 70px;
-  height: 50px;
-  cursor: pointer;
-  font: 700 16px/1 Arial, sans-serif;
-  background-color: orange;
-  border-radius: 5px;
+.buttons div {
+    width: 70px;
+    height: 50px;
+    border: 1px solid #d1d1d1;
+    display: inline-block;
+    margin-bottom: 4px;
+    border-radius: 4px;
+    font: 700 16px/1 Roboto;
+    font-size: 20px;
+    color: black;
+    line-height: 50px;
+    cursor: pointer;
+}
+
+.buttons div:hover {
+    background-color: #ddd1e0;
+}
+
+.enter {
+  background-color: #fce483;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
 }

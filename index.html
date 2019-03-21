@@ -3,46 +3,39 @@
 <head>
   <title>Calculator</title>
   <link rel="stylesheet" href="styles.css">
-
 </head>
 
 <body>
   <div class="calculator">
-    <form class="main_form">
-      <div class="screen" id="screen">
+    <div class="screen" id="screen">
+    </div>
+      <div class="buttons">
+        <div name="button" id="(">(</div>
+        <div name="button" id=")">)</div>
+        <div name="button" id="%">%</div>
+        <div name="button" id="*">x</div>
+
+        <div name="button" id="7">7</div>
+        <div name="button" id="8">8</div>
+        <div name="button" id="9">9</div>
+        <div name="button" id="/">÷</div>
+
+        <div name="button" id="4">4</div>
+        <div name="button" id="5">5</div>
+        <div name="button" id="6">6</div>
+        <div name="button" id="+">+</div>
+
+        <div name="button" id="1">1</div>
+        <div name="button" id="2">2</div>
+        <div name="button" id="3">3</div>
+        <div name="button" id="-">-</div>
+
+        <div name="button" id="0">0</div>
+        <div name="button" id=".">.</div>
+        <div name="button" id="Backspace">CE</div>
+        <div name="button" class="enter" id="Enter">=</div>
       </div>
-      <div class="buttons_row">
-        <button type="button" class="buttons" id="(">(</button>
-        <button type="button" class="buttons" id=")">)</button>
-        <button type="button" class="buttons" id="%">%</button>
-        <button type="button" class="buttons" id="*">x</button>
-      </div>
-      <div class="buttons_row">
-        <button type="button" class="buttons" id="7">7</button>
-        <button type="button" class="buttons" id="8">8</button>
-        <button type="button" class="buttons" id="9">9</button>
-        <button type="button" class="buttons" id="/">÷</button>
-      </div>
-      <div class="buttons_row">
-        <button type="button" class="buttons" id="4">4</button>
-        <button type="button" class="buttons" id="5">5</button>
-        <button type="button" class="buttons" id="6">6</button>
-        <button type="button" class="buttons" id="+">+</button>
-      </div>
-      <div class="buttons_row">
-        <button type="button" class="buttons" id="1">1</button>
-        <button type="button" class="buttons" id="2">2</button>
-        <button type="button" class="buttons" id="3">3</button>
-        <button type="button" class="buttons" id="-">-</button>
-      </div>
-      <div class="buttons_row">
-        <button type="button" class="buttons" id="0">0</button>
-        <button type="button" class="buttons" id=".">.</button>
-        <button type="button" class="buttons" id="Backspace">CE</button>
-        <button type="button" class="equals" id="Enter">=</button>
-      </div>
-    </form>
-  </div>
+    </div>
 <script src="script.js"></script>
 </body>
 </html>
